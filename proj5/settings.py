@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -25,7 +26,7 @@ SECRET_KEY = 'django-insecure-gt@$vqpg!z*9d61$#lcgc-)y7utlz*ug&%aop@ylymq25w%aw^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-daviddprogrammer-proj5-tt90asntpw2.ws-eu116.gitpod.io']
+ALLOWED_HOSTS = ['8000-daviddprogrammer-proj5-f9yhtvbj7p9.ws-eu116.gitpod.io']
 
 
 
