@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: url('/media/pexels-moose-photos-170195-1036621.jpg') no-repeat center cemter fixed;
+    background: url('./../media/pexels-moose-photos-170195-1036621.jpg') no-repeat center cemter fixed;
     background-size: cover;
     height: calc(100vh-164px);
     color: #555;
@@ -56,6 +56,9 @@ body {
     border: 1px solid black!important;
 }
 
+.bg-black {
+    background: #5c5a5a !important;
+}
 /*...........................Media queries*/
 /* larger container on xl screens */
 @media (min-width: 1200px){
