@@ -1,0 +1,20 @@
+"categories": [
+	{
+		"id":1,
+		"name": "Cheese Cake",
+		"description":"Delicious cakes for all occasions.",
+		"imageUrl": "pexels-suzyhazelwood-1098592.jpg"
+	},
+	{
+		"id":2,
+		"name": "Carrot Cake",
+		"description": "Perfectly portioned sweet treats.",
+		"imageUrl":"pexels-chudesabyvaut-1351350.jpg"
+	},
+	{
+		"id":3,
+		"name": "Chocolate Cake",
+		"description": " Scruptious chocolate came to satisfy your cravings.",
+		"imageUrl": 
+	}
+]
