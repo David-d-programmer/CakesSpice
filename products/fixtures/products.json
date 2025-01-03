@@ -1,0 +1,34 @@
+{
+    "products": [
+      {
+        "id": 20,
+        "name": "Chocolate Trufle Cake",
+        "categoryid": 1,
+        "description": "Creamy chocolate cake",
+        "price": 34.99,
+        "imageUrl": null,
+        "stock": 7,
+        "rating": 4.7
+      },
+      {
+        "id": 21,
+        "name": "Cheese Raspberry Cake",
+        "categoryid": 1,
+        "description": "Light vanilla sponge cake",
+        "price": 28.67,
+        "imageUrl": null,
+        "stock": 21,
+        "rating": 4.9
+      },
+      {
+        "id": 22,
+        "name": "Carrot Cake",
+        "categoryid": 2,
+        "description": "Carrot cake with suiting taste",
+        "price": 10.45,
+        "imageUrl": null,
+        "stock": 12,
+        "rating": 4.6
+      }
+    ]
+  }
