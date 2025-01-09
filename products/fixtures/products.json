@@ -1,34 +1,162 @@
-{
-    "products": [
-      {
-        "id": 20,
-        "name": "Chocolate Trufle Cake",
-        "categoryid": 1,
-        "description": "Creamy chocolate cake",
-        "price": 34.99,
-        "imageUrl": null,
-        "stock": 7,
-        "rating": 4.7
-      },
-      {
-        "id": 21,
-        "name": "Cheese Raspberry Cake",
-        "categoryid": 1,
-        "description": "Light vanilla sponge cake",
-        "price": 28.67,
-        "imageUrl": null,
-        "stock": 21,
-        "rating": 4.9
-      },
-      {
-        "id": 22,
-        "name": "Carrot Cake",
-        "categoryid": 2,
-        "description": "Carrot cake with suiting taste",
-        "price": 10.45,
-        "imageUrl": null,
-        "stock": 12,
-        "rating": 4.6
-      }
-    ]
-  }
+[
+    {
+        "model": "products.product",
+        "pk": 1,
+        "fields": {
+            "name": "Cheese Raspberry Cake",
+            "category": 1,
+            "description": "Light vanilla sponge cake",
+            "rating": 4.9,
+            "price": 28.26,
+            "image": "generated85613391280.jpg",
+            "imageUrl": "https://pixabay.com/illustrations/ai-generated-cheesecake-dessert-8561339/,"
+            
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 2,
+        "fields": {
+            "name": "Cheese Patry Cake",
+            "category": 1,
+            "description": "Yummy Cheese Pastry",
+            "rating": 4.5,
+            "price": 18.35,
+            "image": "cake-7796383_1280.jpg",
+            "imageUrl": "https://pixabay.com/photos/cake-cheesecake-pastry-yummy-7796383/,"
+            
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 3,
+        "fields": {
+            "name": "Cake lemon cheesecake",
+            "category": 1,
+            "description": "Lemon Cheese Cake",
+            "rating": 4.3,
+            "price": 29.23,
+            "image": "lemon-cake-6668365_1280.jpg",
+            "imageUrl": "https://pixabay.com/photos/lemon-cake-lemon-cheesecake-6668365/"
+            
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 4,
+        "fields": {
+            "name": "Cake Berries cheesecake",
+            "category": 1,
+            "description": "Pie Cake Baked Berries",
+            "rating": 4.1,
+            "price": 17.47,
+            "image": "cheesecake-8305890_1280.jpg",
+            "imageUrl": "https://pixabay.com/photos/cheesecake-pie-cake-baked-berries-8305890/"
+            
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 5,
+        "fields": {
+            "name": "Carrot Cake",
+            "category": 2,
+            "description": "Carrot muffin-cake with suiting taste",
+            "rating": 4.6,
+            "price": 3.30,
+            "image": "carrot-cake-1473615_1280.jpg",
+            "imageUrl": "https://pixabay.com/photos/carrot-cake-cakes-muffins-cupcakes-1473615/,"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 6,
+        "fields": {
+            "name": "Carrot Cup Cake",
+            "category": 2,
+            "description": "Carrot cake with suiting taste",
+            "rating": 4.2,
+            "price": 4.45,
+            "image": "cupcake-279523_1280.jpg",
+            "imageUrl": "https://pixabay.com/photos/cakes-carrot-cake-yummy-meal-3416079/,"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 7,
+        "fields": {
+            "name": "CarrotCake",
+            "category": 2,
+            "description": "pure carrot cake",
+            "rating": 4.6,
+            "price": 12.22,
+            "image": "cakes-3415628_1280.jpg",
+            "imageUrl": "https://pixabay.com/photos/cakes-carrot-cake-yummy-meal-3415628/"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 8,
+        "fields": {
+            "name": "Carrot Food Cake",
+            "category": 2,
+            "description": " carrot food cake",
+            "rating": 4.9,
+            "price": 32.25,
+            "image": "carrot-cake-5126480_1280.jpg",
+            "imageUrl": "https://pixabay.com/photos/carrot-cake-food-cake-sweet-5126480/"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 9,
+        "fields": {
+            "name": "Chocolate Trufle Cake",
+            "category": 3,
+            "description": "Creamy chocolate cake",
+            "rating": 4.7,
+            "price": 34.99,
+            "image": "creamy chocolate cake.jpg",
+            "imageUrl": "https://pixabay.com/photos/cake-icecream-chocolate-food-4337127/"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 10,
+        "fields": {
+            "name": "Chocolate Trufle Cake",
+            "category": 3,
+            "description": "Creamy chocolate cake",
+            "rating": 4.7,
+            "price": 34.99,
+            "image": "creamy chocolate cake.jpg",
+            "imageUrl": "https://pixabay.com/photos/cake-icecream-chocolate-food-4337127/"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 11,
+        "fields": {
+            "name": "Chocolate Trufle Cake",
+            "category": 3,
+            "description": "Creamy chocolate cake",
+            "rating": 4.7,
+            "price": 34.99,
+            "image": "creamy chocolate cake.jpg",
+            "imageUrl": "https://pixabay.com/photos/cake-icecream-chocolate-food-4337127/"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 12,
+        "fields": {
+            "name": "Chocolate Trufle Cake",
+            "category": 3,
+            "description": "Creamy chocolate cake",
+            "rating": 4.7,
+            "price": 34.99,
+            "image": "creamy chocolate cake.jpg",
+            "imageUrl": "https://pixabay.com/photos/cake-icecream-chocolate-food-4337127/"
+        }
+    },
+]

@@ -4,7 +4,7 @@
         "pk": 1,
         "fields": {
             "name": "Cheese Cake",
-            "description": "Delicious cakes for all occasions."
+            "description": "An amazing dessert made with a soft fresh cheese; it could be cottage cheese, cream cheese, quark or ricotta, eggs, and sugar."
         }
     },
     {
@@ -12,7 +12,7 @@
         "pk": 2,
         "fields": {
             "name": "Carrot Cake",
-            "description": "Perfectly portioned sweet treats."
+            "description": "A tasty fluffy and moist cake that is commonly served with a chocolate ganache topping."
         }
     },
     {
@@ -20,7 +20,23 @@
         "pk": 3,
         "fields": {
             "name": "Chocolate Cake",
-            "description": "Scruptious chocolate came to satisfy your cravings."
+            "description": "A beautiful looking and yummy cake flavored with melted chocolate, cocoa powder, or both."
+        }
+    },
+    {
+        "model": "products.category",
+        "pk": 4,
+        "fields": {
+            "name": "Red Velvet Cake",
+            "description": "a nice colored red, crimson, or scarlet-colored layer cake, layered with ermine icing or cream cheese icing."
+        }
+    },
+    {
+        "model": "products.category",
+        "pk": 5,
+        "fields": {
+            "name": "Butter Cake",
+            "description": "A cake made with butter as a main ingredient, along with sugar, eggs, flour, and leavening agents like baking powder or baking soda."
         }
     }
 ]
