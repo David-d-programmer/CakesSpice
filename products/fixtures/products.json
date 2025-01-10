@@ -164,7 +164,7 @@
         "pk": 13,
         "fields": {
             "name": "Red Velvet Cake",
-            "category": 4,
+            "category": 3,
             "description": "Red velvet cake",
             "rating": 4.8,
             "price": 4.68,
