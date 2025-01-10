@@ -3,6 +3,10 @@ from django.utils.timezone import now
 
 # Create your models here.
 class Category(models.Model):
+
+    class Meta:
+        verbose_name_plural = 'Categories'
+
     name = models.CharField(max_length=100)
     description = models.TextField(default=now)
     created_at = models.DateTimeField(default=now)
