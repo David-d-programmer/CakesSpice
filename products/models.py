@@ -14,6 +14,7 @@ class Product(models.Model):
     category = models.ForeignKey('Category', on_delete=models.CASCADE, default=1)
     rating = models.DecimalField(max_digits=6, decimal_places=2, null=False, default=0.0)
     imageUrl = models.URLField(null=True, blank=True)
+    image = models.ImageField(upload_to='products/', null=True, blank=True)
 
 
     def __str__(self):

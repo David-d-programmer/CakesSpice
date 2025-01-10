@@ -115,7 +115,7 @@
             "category": 3,
             "description": "Creamy chocolate cake",
             "rating": 4.7,
-            "price": 34.99,
+            "price": 6.99,
             "image": "creamy chocolate cake.jpg",
             "imageUrl": "https://pixabay.com/photos/cake-icecream-chocolate-food-4337127/"
         }
@@ -124,13 +124,13 @@
         "model": "products.product",
         "pk": 10,
         "fields": {
-            "name": "Chocolate Trufle Cake",
+            "name": "Chocolate Berry Cake",
             "category": 3,
-            "description": "Creamy chocolate cake",
-            "rating": 4.7,
-            "price": 34.99,
-            "image": "creamy chocolate cake.jpg",
-            "imageUrl": "https://pixabay.com/photos/cake-icecream-chocolate-food-4337127/"
+            "description": "Sweet chocolate  berries desert",
+            "rating": 4.8,
+            "price": 34.65,
+            "image": "cake-8233676_1280.jpg",
+            "imageUrl": "https://pixabay.com/photos/cake-berries-dessert-sweet-8233676/"
         }
     },
     {
@@ -139,24 +139,116 @@
         "fields": {
             "name": "Chocolate Trufle Cake",
             "category": 3,
-            "description": "Creamy chocolate cake",
-            "rating": 4.7,
-            "price": 34.99,
-            "image": "creamy chocolate cake.jpg",
-            "imageUrl": "https://pixabay.com/photos/cake-icecream-chocolate-food-4337127/"
+            "description": "Pure chocolate cake",
+            "rating": 4.5,
+            "price": 8.99,
+            "image": "pure chocolate cake.jpg",
+            "imageUrl": "https://pixabay.com/photos/cake-chocolate-chocolate-cake-1850011/"
         }
     },
     {
         "model": "products.product",
         "pk": 12,
         "fields": {
-            "name": "Chocolate Trufle Cake",
+            "name": "Chocolate Syrup Cake",
             "category": 3,
-            "description": "Creamy chocolate cake",
-            "rating": 4.7,
-            "price": 34.99,
-            "image": "creamy chocolate cake.jpg",
-            "imageUrl": "https://pixabay.com/photos/cake-icecream-chocolate-food-4337127/"
+            "description": "chocolate syrup chocolate cake",
+            "rating": 4.9,
+            "price": 40.68,
+            "image": "cake-7605481_1280.jpg",
+            "imageUrl": "https://pixabay.com/illustrations/cake-chocolate-cake-chocolate-syrup-7605481/"
         }
     },
+    {
+        "model": "products.product",
+        "pk": 13,
+        "fields": {
+            "name": "Red Velvet Cake",
+            "category": 4,
+            "description": "Red velvet cake",
+            "rating": 4.8,
+            "price": 4.68,
+            "image": "cake-1750581_1280.jpg",
+            "imageUrl": "https://pixabay.com/photos/cake-red-velvet-wedding-a-piece-1750581/"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 14,
+        "fields": {
+            "name": "Red Velvet Cake",
+            "category": 4,
+            "description": "Creamy red velvet",
+            "rating": 4.8,
+            "price": 26.68,
+            "image": "cake-5377289_1280.jpg",
+            "imageUrl": "https://pixabay.com/photos/cake-red-velvet-5377289/"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 15,
+        "fields": {
+            "name": "Red Velvet Cake",
+            "category": 4,
+            "description": "Red velvet cake",
+            "rating": 4.8,
+            "price": 4.68,
+            "image": "cake-6133059_1280.jpg",
+            "imageUrl": "https://pixabay.com/photos/cake-chocolate-bakery-sweet-6133059/"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 16,
+        "fields": {
+            "name": "Red Velvet Cake",
+            "category": 4,
+            "description": "Red velvet dessert",
+            "rating": 4.2,
+            "price": 14.68,
+            "image": "red-velvet-cake-4917734_1280 (1).jpg",
+            "imageUrl": "https://pixabay.com/photos/red-velvet-cake-cake-dessert-4917734/"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 17,
+        "fields": {
+            "name": "Butter Cake",
+            "category": 5,
+            "description": "butter cake",
+            "rating": 4.8,
+            "price": 9.5,
+            "image": "butter cake.jpg",
+            "imageUrl": "https://www.freepik.com/free-photo/vertical-shot-delicious-piece-cream-pie-with-crispy-almonds-strawberries_15671749.htm#fromView=keyword&page=1&position=2&uuid=dbb650c0-9c99-4eaa-8f01-9df8a7684f71"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 18,
+        "fields": {
+            "name": "Butter Cake",
+            "category": 5,
+            "description": "butter strawberry cake",
+            "rating": 4.6,
+            "price": 15.5,
+            "image": "delicious-strawberry.jpg",
+            "imageUrl": "https://www.freepik.com/free-photo/delicious-strawberry-chocolate-cake-with-fresh-strawberries-top-view_8275180.htm#fromView=keyword&page=1&position=1&uuid=dbb650c0-9c99-4eaa-8f01-9df8a7684f71"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 19,
+        "fields": {
+            "name": "Butter Cake",
+            "category": 5,
+            "description": "Breakfast butter cake",
+            "rating": 4.8,
+            "price": 9.5,
+            "image": "breakfast butter cake.jpg",
+            "imageUrl": "https://www.freepik.com/free-photo/front-closed-up-view-sweet-cake-piece-delicious-yummy-choco-cake-slice-inside-beige-plate_9367401.htm#fromView=keyword&page=1&position=19&uuid=d6a28848-3ed6-4b04-8bf6-daf71d4280f5"
+        }
+    }
+    
 ]
