@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: url('./../media/pexels-moose-photos-170195-1036621.jpg') no-repeat center cemter fixed;
+    background: url('../media/170195-1036621 (2).jpg') no-repeat center cemter fixed;
     background-size: cover;
     height: calc(100vh-164px);
     color: #555;
@@ -58,6 +58,16 @@ body {
 
 .bg-black {
     background: #5c5a5a !important;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: white;
+    z-index: -1;
 }
 /*...........................Media queries*/
 /* larger container on xl screens */
