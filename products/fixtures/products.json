@@ -59,7 +59,7 @@
         "model": "products.product",
         "pk": 5,
         "fields": {
-            "name": "Carrot Cake",
+            "name": "Carrot Muffin Cake",
             "category": 2,
             "description": "Carrot muffin-cake with suiting taste",
             "rating": 4.6,
@@ -137,7 +137,7 @@
         "model": "products.product",
         "pk": 11,
         "fields": {
-            "name": "Chocolate Trufle Cake",
+            "name": "Pure Chocolate Cake",
             "category": 3,
             "description": "Pure chocolate cake",
             "rating": 4.5,
@@ -163,7 +163,7 @@
         "model": "products.product",
         "pk": 13,
         "fields": {
-            "name": "Red Velvet Cake",
+            "name": "Berry Red Velvet Cake",
             "category": 3,
             "description": "Red velvet cake",
             "rating": 4.8,
@@ -176,9 +176,9 @@
         "model": "products.product",
         "pk": 14,
         "fields": {
-            "name": "Red Velvet Cake",
+            "name": "Creamy Red Velvet Cake",
             "category": 4,
-            "description": "Creamy red velvet",
+            "description": "Creamy red velvet cake",
             "rating": 4.8,
             "price": 26.68,
             "image": "cake-5377289_1280.jpg",
@@ -189,9 +189,9 @@
         "model": "products.product",
         "pk": 15,
         "fields": {
-            "name": "Red Velvet Cake",
+            "name": " Red Velvet Yummy Cake",
             "category": 4,
-            "description": "Red velvet cake",
+            "description": "Red velvet yummy cake",
             "rating": 4.8,
             "price": 4.68,
             "image": "cake-6133059_1280.jpg",
@@ -202,9 +202,9 @@
         "model": "products.product",
         "pk": 16,
         "fields": {
-            "name": "Red Velvet Cake",
+            "name": " Red Velvet Dessert Cake",
             "category": 4,
-            "description": "Red velvet dessert",
+            "description": "Red velvet dessert cake",
             "rating": 4.2,
             "price": 14.68,
             "image": "red-velvet-cake-4917734_1280 (1).jpg",
@@ -215,12 +215,12 @@
         "model": "products.product",
         "pk": 17,
         "fields": {
-            "name": "Butter Cake",
+            "name": "Butter Milky Cake",
             "category": 5,
-            "description": "butter cake",
+            "description": "butter milky cake",
             "rating": 4.8,
             "price": 9.5,
-            "image": "butter cake.jpg",
+            "image": "butter milky cake.jpg",
             "imageUrl": "https://www.freepik.com/free-photo/vertical-shot-delicious-piece-cream-pie-with-crispy-almonds-strawberries_15671749.htm#fromView=keyword&page=1&position=2&uuid=dbb650c0-9c99-4eaa-8f01-9df8a7684f71"
         }
     },
@@ -228,7 +228,7 @@
         "model": "products.product",
         "pk": 18,
         "fields": {
-            "name": "Butter Cake",
+            "name": "Butter Strawberry Cake",
             "category": 5,
             "description": "butter strawberry cake",
             "rating": 4.6,
@@ -241,7 +241,7 @@
         "model": "products.product",
         "pk": 19,
         "fields": {
-            "name": "Butter Cake",
+            "name": "Breakfast Butter Cake",
             "category": 5,
             "description": "Breakfast butter cake",
             "rating": 4.8,
