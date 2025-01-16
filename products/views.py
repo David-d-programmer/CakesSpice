@@ -39,7 +39,7 @@ def all_products(request):
 
 
         if 'category' in request.GET:
-            categories = request.GET['category'].split(',')
+            selected_categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=selected_categories)
             categories = Category.objects.filter(name__in=selected_categories)
     
@@ -52,7 +52,10 @@ def all_products(request):
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
 
-    current_sorting = f'{sort}_{direction}'
+    if sort is None and direction is None:
+        current_sorting = 'None_None'  
+    else:
+        current_sorting = f'{sort}_{direction}'
 
     context = {
         'products': products,
