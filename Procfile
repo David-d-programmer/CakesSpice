@@ -1,0 +1,1 @@
+web: gunicorn CAKESSPICE.wsgi:application
