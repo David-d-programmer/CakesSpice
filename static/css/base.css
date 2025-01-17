@@ -2,13 +2,6 @@ html {
     height: 100%;
 }
 
-body {
-    background: url('../media/170195-1036621 (2).jpg') no-repeat center cemter fixed;
-    background-size: cover;
-    height: calc(100vh-164px);
-    color: #555;
-    font-family: Geist Mono;
-}
 
 .icon {
     align-items: center;
@@ -96,6 +89,215 @@ a.category-badge > span.badge:hover {
 .bttn-link {
     cursor: pointer;
 }
+/* General Body Styling */
+body {
+    font-family: Geist Mono;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+.header-container {
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+}
+
+.header-container h1 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+/* Overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: -1;
+}
+
+/* Container and Row for Content */
+.container {
+    margin-top: 50px;
+}
+
+.row {
+    margin: 0;
+}
+
+/* Table Styling */
+.table-responsive {
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    padding: 15px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.table th {
+    background-color: #f8f8f8;
+    font-weight: bold;
+    color: #333;
+}
+
+.table td {
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.table img {
+    width: 60px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Product Name Styling */
+.table td p {
+    margin: 0;
+}
+
+.table td p.my-0 {
+    font-size: 1rem;
+}
+
+.table td .small {
+    font-size: 0.875rem;
+    color: #999;
+}
+
+/* Price and Total Section */
+.text-right h6 {
+    margin-bottom: 10px;
+    font-weight: normal;
+    font-size: 1.2rem;
+}
+
+.text-right h4 {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.text-danger {
+    font-size: 0.875rem;
+    color: #d9534f;
+}
+
+/* Buttons */
+.btn {
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-outline-black {
+    border: 2px solid #333;
+    color: #333;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-black:hover {
+    background-color: #333;
+    color: white;
+}
+
+.btn-black {
+    background-color: #333;
+    color: white;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-black:hover {
+    background-color: #444;
+}
+
+.icon {
+    margin-right: 10px;
+}
+
+.fas {
+    font-size: 1.2rem;
+}
+
+/* Keep Shopping Button */
+.btn-lg {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+/* Empty Bag Styling */
+.lead {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #888;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.btn-outline-black {
+    margin-top: 20px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .table-responsive {
+        margin-top: 10px;
+    }
+
+    .table td p {
+        font-size: 0.9rem;
+    }
+
+    .table th, .table td {
+        padding: 10px;
+    }
+
+    .table img {
+        width: 50px;
+    }
+
+    .btn-lg {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .table td {
+        font-size: 0.875rem;
+    }
+
+    .text-right h4, .text-right h6 {
+        font-size: 1rem;
+    }
+}
+
 /*...........................Media queries*/
 /* larger container on xl screens */
 @media (min-width: 1200px){
