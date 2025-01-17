@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-gt@$vqpg!z*9d61$#lcgc-)y7utlz*ug&%aop@ylymq25w%aw^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['cakesspice', 'local host']
+ALLOWED_HOSTS = ['cakesspice-d57190d7147c.herokuapp.com', 'localhost']
 
 
 
