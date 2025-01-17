@@ -1,75 +1,93 @@
-<div class="collapse navbar-collapse" id="main-nav">
-    <ul class="navbar-nav w-auto mx-auto">
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                All Products
-            </a>
-            <div classs="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
-                <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item">By Rating</a>
-                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item">By Category</a>
-                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
-                
-            </div>
-        </li>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="cheese-cake-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Cheese Cake
-            </a>
-            <div classs="dropdown-menu border-0" aria-labelledby="cheese-cake-link">
-                <a href="{% url 'products' %}?q=Cheese Raspberry Cake" class="dropdown-item">Cheese Raspberry Cake</a>
-                <a href="{% url 'products' %}?q=Cheese Patry Cake" class="dropdown-item">Cheese Patry Cake</a>
-                <a href="{% url 'products' %}?q=Cake Lemon Cheesecake" class="dropdown-item">Cake Lemon Cheesecake</a>
-                <a href="{% url 'products' %}?q=Cake Berries Cheesecake" class="dropdown-item">Cake Berries Cheesecake</a>
-            </div>
-        </li>
+        <div class="collapse navbar-collapse" id="main-nav">
+            <ul class="navbar-nav w-auto mx-auto">
+                <!-- All Products Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="logo-font font-weight-bold nav-link text-black" href="#" id="all-products-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        All Products
+                    </a>
+                    <ul class="dropdown-menu border-0" aria-labelledby="all-products-link">
+                        <li><a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a></li>
+                        <li><a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item">By Rating</a></li>
+                        <li><a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item">By Category</a></li>
+                        <li><a href="{% url 'products' %}" class="dropdown-item">All Products</a></li>
+                    </ul>
+                </li>
 
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="carrot-cake-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Carrot Cake
-            </a>
-            <div classs="dropdown-menu border-0" aria-labelledby="carrot-cake-link">
-                <a href="{% url 'products' %}?q=Carrot Muffin Cake" class="dropdown-item">Carrot Muffin Cake</a>
-                <a href="{% url 'products' %}?q=Carrot Cup Cake" class="dropdown-item">Carrot Cup Cake</a>
-                <a href="{% url 'products' %}?q=Pure Carrot Cake" class="dropdown-item">Pure Carrot Cake</a>
-                <a href="{% url 'products' %}?q=Carrot Food Cake" class="dropdown-item">Carrot Food Cake</a>
-            </div>
-        </li>
+                <!-- Cheese Cake Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="logo-font font-weight-bold nav-link text-black" href="#" id="cheese-cake-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Cheese Cake
+                    </a>
+                    <ul class="dropdown-menu border-0" aria-labelledby="cheese-cake-link">
+                        <li><a href="{% url 'products' %}?q=Cheese Raspberry Cake" class="dropdown-item">Cheese Raspberry Cake</a></li>
+                        <li><a href="{% url 'products' %}?q=Cheese Patry Cake" class="dropdown-item">Cheese Patry Cake</a></li>
+                        <li><a href="{% url 'products' %}?q=Cake Lemon Cheesecake" class="dropdown-item">Cake Lemon Cheesecake</a></li>
+                        <li><a href="{% url 'products' %}?q=Cake Berries Cheesecake" class="dropdown-item">Cake Berries Cheesecake</a></li>
+                    </ul>
+                </li>
 
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="chocolate-cake-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Chocolate Cake
-            </a>
-            <div classs="dropdown-menu border-0" aria-labelledby="chocolate-cake-link">
-                <a href="{% url 'products' %}?q=Chocolate Trufle Cake" class="dropdown-item">Chocolate Trufle Cake</a>
-                <a href="{% url 'products' %}?q=Chocolate Berry Cake" class="dropdown-item">Chocolate Berry Cake</a>
-                <a href="{% url 'products' %}?q=Pure Chocolate Cake" class="dropdown-item">Pure Chocolate Cake</a>
-                <a href="{% url 'products' %}?q=Chocolate Syrup Cake" class="dropdown-item">Chocolate Syrup Cake</a>
-            </div>
-        </li>
+                <!-- Carrot Cake Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="logo-font font-weight-bold nav-link text-black" href="#" id="carrot-cake-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Carrot Cake
+                    </a>
+                    <ul class="dropdown-menu border-0" aria-labelledby="carrot-cake-link">
+                        <li><a href="{% url 'products' %}?q=Carrot Muffin Cake" class="dropdown-item">Carrot Muffin Cake</a></li>
+                        <li><a href="{% url 'products' %}?q=Carrot Cup Cake" class="dropdown-item">Carrot Cup Cake</a></li>
+                        <li><a href="{% url 'products' %}?q=Pure Carrot Cake" class="dropdown-item">Pure Carrot Cake</a></li>
+                        <li><a href="{% url 'products' %}?q=Carrot Food Cake" class="dropdown-item">Carrot Food Cake</a></li>
+                    </ul>
+                </li>
 
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="Red-Velvet-cake-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Red Velvet Cake
-            </a>
-            <div classs="dropdown-menu border-0" aria-labelledby="Red-Velvet-cake-link">
-                <a href="{% url 'products' %}?q=Berry Red Velvet Cake" class="dropdown-item">Berry Red Velvet Cake</a>
-                <a href="{% url 'products' %}?q=Creamy Red Velvet Cake" class="dropdown-item">Creamy Red Velvet Cake</a>
-                <a href="{% url 'products' %}?q=Red Velvet Yummy Cake" class="dropdown-item">Red Velvet Yummy Cake</a>
-                <a href="{% url 'products' %}?q=Red Velvet Dessert Cake" class="dropdown-item">Red Velvet Dessert Cake</a>
-            </div>
-        </li>
+                <!-- Chocolate Cake Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="logo-font font-weight-bold nav-link text-black" href="#" id="chocolate-cake-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Chocolate Cake
+                    </a>
+                    <ul class="dropdown-menu border-0" aria-labelledby="chocolate-cake-link">
+                        <li><a href="{% url 'products' %}?q=Chocolate Trufle Cake" class="dropdown-item">Chocolate Trufle Cake</a></li>
+                        <li><a href="{% url 'products' %}?q=Chocolate Berry Cake" class="dropdown-item">Chocolate Berry Cake</a></li>
+                        <li><a href="{% url 'products' %}?q=Pure Chocolate Cake" class="dropdown-item">Pure Chocolate Cake</a></li>
+                        <li><a href="{% url 'products' %}?q=Chocolate Syrup Cake" class="dropdown-item">Chocolate Syrup Cake</a></li>
+                    </ul>
+                </li>
 
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="butter-cake-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Butter Cake
-            </a>
-            <div classs="dropdown-menu border-0" aria-labelledby="butter-cake-link">
-                <a href="{% url 'products' %}?q=Butter Milky Cake" class="dropdown-item">Butter Milky Cake</a>
-                <a href="{% url 'products' %}?q=Butter Strawberry Cake" class="dropdown-item">Butter Strawberry Cake</a>
-                <a href="{% url 'products' %}?q=Breakfast Butter Cake" class="dropdown-item">Breakfast Butter Cake</a>
-            </div>
-        </li>
-    </ul>
-</div>
+                <!-- Red Velvet Cake Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="logo-font font-weight-bold nav-link text-black" href="#" id="Red-Velvet-cake-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Red Velvet Cake
+                    </a>
+                    <ul class="dropdown-menu border-0" aria-labelledby="Red-Velvet-cake-link">
+                        <li><a href="{% url 'products' %}?q=Berry Red Velvet Cake" class="dropdown-item">Berry Red Velvet Cake</a></li>
+                        <li><a href="{% url 'products' %}?q=Creamy Red Velvet Cake" class="dropdown-item">Creamy Red Velvet Cake</a></li>
+                        <li><a href="{% url 'products' %}?q=Red Velvet Yummy Cake" class="dropdown-item">Red Velvet Yummy Cake</a></li>
+                        <li><a href="{% url 'products' %}?q=Red Velvet Dessert Cake" class="dropdown-item">Red Velvet Dessert Cake</a></li>
+                    </ul>
+                </li>
+
+                <!-- Butter Cake Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="logo-font font-weight-bold nav-link text-black" href="#" id="butter-cake-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Butter Cake
+                    </a>
+                    <ul class="dropdown-menu border-0" aria-labelledby="butter-cake-link">
+                        <li><a href="{% url 'products' %}?q=Butter Milky Cake" class="dropdown-item">Butter Milky Cake</a></li>
+                        <li><a href="{% url 'products' %}?q=Butter Strawberry Cake" class="dropdown-item">Butter Strawberry Cake</a></li>
+                        <li><a href="{% url 'products' %}?q=Breakfast Butter Cake" class="dropdown-item">Breakfast Butter Cake</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>

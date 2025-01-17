@@ -334,3 +334,108 @@ body {
     }
 
 }
+
+/* Basic navbar styling */
+.navbar-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navbar items (li) */
+.nav-item {
+    position: relative;
+    margin: 0 15px;
+}
+
+/* Navbar links */
+.nav-link {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    padding: 10px 15px;
+    display: block;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for navbar links */
+.nav-link:hover {
+    background-color: #f8f9fa; /* Light gray background on hover */
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    z-index: 1000;
+}
+
+/* Show the dropdown when hovering */
+.nav-item:hover .dropdown-menu {
+    display: block;
+}
+
+/* Dropdown items */
+.dropdown-item {
+    text-decoration: none;
+    padding: 10px 15px;
+    color: black;
+    font-size: 14px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for dropdown items */
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+}
+
+/* Remove borders from dropdown items */
+.dropdown-item {
+    border: none;
+}
+
+/* Navbar item spacing */
+.navbar-nav > .nav-item {
+    margin-right: 20px;
+}
+
+.nav-item .dropdown-menu {
+    padding-left: 0;
+}
+
+/* Fix for potential visual misalignment */
+.navbar-nav > .nav-item > .dropdown-menu {
+    margin-top: 5px;
+}
+
+/* For mobile view, adjust navbar items to be centered */
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-item {
+        margin-bottom: 10px;
+    }
+
+    .nav-link {
+        padding: 12px;
+    }
+
+    .dropdown-menu {
+        position: relative;
+        width: 100%;
+    }
+}
