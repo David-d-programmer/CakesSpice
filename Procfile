@@ -1,1 +1,1 @@
-web: gunicorn cakesspice.wsgi:application
+web: gunicorn Proj5.wsgi:application
