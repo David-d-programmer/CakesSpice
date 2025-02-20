@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '3b_daxvhwj_hiftfe#+3oj8sdhc%(+ne#-5e(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-daviddprogra-cakesspice-efmtc4x7qtp.ws-eu117.gitpod.io', 'localhost']
+ALLOWED_HOSTS = ['8000-daviddprogra-cakesspice-lpth8zi2ygb.ws-eu117.gitpod.io', 'localhost']
 
 
 
@@ -83,6 +83,7 @@ TEMPLATES = [
     },
 ]
 
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 AUTHENTICATION_BACKENDS = [
     # Needed to login by username in Django admin, regardless of `allauth`
     'django.contrib.auth.backends.ModelBackend',

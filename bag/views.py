@@ -1,6 +1,9 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.http import HttpResponse
+from django.contrib import messages
+from products.models import Product
+
 
 # Create your views here.
 
@@ -14,7 +17,7 @@ def add_to_bag(request, item_id):
 
     if not item_id:
         return HttpResponse('Item ID is missing', status=400)
-
+    product = Product.objects.get(pk=item_id)
     quantity = int(request.POST.get('quantity', 1))
     redirect_url = request.POST.get('redirect_url', '/')
     bag = request.session.get('bag', {})
@@ -23,6 +26,7 @@ def add_to_bag(request, item_id):
         bag[item_id] += quantity
     else: 
         bag[item_id] = quantity
+        messages.success(request, f'Added {product.name} to your bag')
 
     request.session['bag'] = bag
     
