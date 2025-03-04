@@ -1,7 +1,11 @@
+
+
 {% extends "base.html" %}
 {% load static %}
 {% load bag_tools %}
+
 {% load crispy_forms_tags %}
+
 
 
 
@@ -23,7 +27,7 @@
         <div class="row">
             <div class="col">
                 <hr>
-                <h2 class="logo-font mb-4">Shopping bag</h2>
+                <h2 class="logo-font mb-4">checkout</h2>
                 <hr>
             </div>
         </div>
@@ -96,7 +100,7 @@
                         <div class="form-check form-check-inline float-right mr-0">
                             {% if user.is_authenticated %}
                                 <label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
-                                <input class="form-check-input m1-2 mr-0" type="checkbox">
+                                <input class="form-check-input m1-2 mr-0" type="checkbox" name="save_info" id="id-save-info">
                             {% else %}
                                 <label class="form-check-label" for="id-save-info">
                                     <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or
