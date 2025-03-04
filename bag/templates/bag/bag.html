@@ -31,7 +31,7 @@
                                     <th scope="col">Price</th>
                                     <th scope="col">Qty</th>
                                     <th scope="col">Subtotal</th>
-                                    <th scope="col">Actions</th>  <!-- Add a column for actions -->
+                                    <th scope="col">Actions</th>
                                 </tr>
                             </thead>
 
@@ -42,30 +42,30 @@
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                                        <p class="my-0 small text-muted">Category: {{ item.product.name|upper }}</p>
+                                        <p class="my-0 small text-muted">Category: {{ item.product.category.name|upper }}</p>
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">${{ item.product.price|floatformat:2 * item.quantity }}</p>
+                                        <p class="my-0">${{ item.product.price|floatformat:2 }}</p>
                                     </td>
-                            
-                                    <td class="py-3 w-25">
+                                    <td class="py-3">
+                                        <p class="my-0">
+                                            ${{ item.product.price|floatformat:2|add:item.quantity|floatformat:2 }}
+                                        </p>
+                                    </td>
+                                    <td class="py-3">
                                         <form action="{% url 'adjust_bag' item.product.id %}" method="post">
                                             {% csrf_token %}
                                             <input type="number" name="quantity" value="{{ item.quantity }}" min="1" class="form-control">
                                             <button type="submit" class="btn btn-outline-black btn-sm mt-2">Update</button>
                                         </form>
-                                        
-                                    </td>
-                            
-                                    <td class="py-3">
                                         <form action="{% url 'remove_from_bag' item.product.id %}" method="post">
                                             {% csrf_token %}
                                             <button type="submit" class="btn btn-danger btn-sm mt-2">Remove</button>
                                         </form>
-                                        
                                     </td>
                                 </tr>
                             {% endfor %}
+
                             <tr>
                                 <td colspan="5" class="pt-5 text-right">
                                     <h6><strong>Bag Total: ${{ total|floatformat:2}}</strong></h6>
@@ -73,11 +73,12 @@
                                     <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2}}</strong></h4>
                                     {% if free_delivery_delta > 0 %}
                                         <p class="mb-1 text-danger">
-                                            You could get freee delivery by spending just <strong>${{free_delivery_delta}}</strong> more!
+                                            You could get free delivery by spending just <strong>${{ free_delivery_delta }}</strong> more!
                                         </p>
                                     {% endif %}
                                 </td>
                             </tr>
+
                             <tr>
                                 <td colspan="5" class="text-right">
                                     <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
@@ -86,7 +87,7 @@
                                         </span>
                                         <span class="text-uppercase">Keep Shopping</span>
                                     </a>
-                                    <a href="" class="btn btn-black rounded-0 btn-lg">
+                                    <a href="{% url 'checkout' %}" class="btn btn-black rounded-0 btn-lg">
                                         <span class="text-uppercase">Secure Checkout</span>
                                         <span class="icon">
                                             <i class="fas fa-lock"></i>
@@ -97,17 +98,15 @@
                         </table>
                     </div>
                 {% else %}
-                    <p class="lead mb-5 "> Your bag is empty.</p>
+                    <p class="lead mb-5">Your bag is empty.</p>
                     <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                         </span>
-                        
                         <span class="text-uppercase">Keep Shopping</span>
                     </a>
                 {% endif %}
             </div>
         </div>
     </div>
-    
 {% endblock %}

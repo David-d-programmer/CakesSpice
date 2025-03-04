@@ -23,7 +23,7 @@ def view_bag(request):
 
     total = sum(item['product'].price * item['quantity'] for item in bag_items)
     delivery = 10.00  # Example, replace with your actual delivery calculation
-    grand_total = total + delivery
+    grand_total = float(total) + delivery
     free_delivery_delta = max(0, 50 - total)  # Assuming free delivery for orders over $50
 
     return render(request, 'bag/bag.html', {
@@ -33,6 +33,7 @@ def view_bag(request):
         'grand_total': grand_total,
         'free_delivery_delta': free_delivery_delta
     })
+
 
 
 def add_to_bag(request, item_id):

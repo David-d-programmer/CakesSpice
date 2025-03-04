@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '3b_daxvhwj_hiftfe#+3oj8sdhc%(+ne#-5e(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-daviddprogra-cakesspice-lpth8zi2ygb.ws-eu117.gitpod.io', 'localhost']
+ALLOWED_HOSTS = ['8000-daviddprogra-cakesspice-lpth8zi2ygb.ws-eu118.gitpod.io', 'localhost']
 
 
 
@@ -51,6 +51,9 @@ INSTALLED_APPS = [
     'bag',
     'checkout',
 
+    # Other
+    'crispy_bootstrap4'
+
 ]
 
 MIDDLEWARE = [
@@ -67,6 +70,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'proj5.urls'
 
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -78,8 +83,10 @@ TEMPLATES = [
                 'django.template.context_processors.request', # required by allauth
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
                 'bag.context.bag_contents',
             ],
+            
         },
     },
 ]
@@ -166,7 +173,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-#STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 
