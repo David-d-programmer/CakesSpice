@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '3b_daxvhwj_hiftfe#+3oj8sdhc%(+ne#-5e(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-daviddprogra-cakesspice-lpth8zi2ygb.ws-eu118.gitpod.io', 'localhost']
+ALLOWED_HOSTS = ['8000-daviddprogra-cakesspice-1odgbs0dfx0.ws-eu118.gitpod.io', 'localhost']
 
 
 
@@ -108,10 +108,10 @@ SITE_ID = 1
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
-ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_LOGIN_METHODS = ['username', 'email']
+ACCOUNT_SIGNUP_FIELDS = ['email*', 'email2*', 'username*', 'password1*', 'password2*']
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
-ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
+ACCOUNT_SIGNUP_FIELDS = ['email*', 'email2*', 'username*', 'password1*', 'password2*']
 ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
 lOGIN_REDIRECT_URL = '/'
@@ -186,8 +186,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #stripe
-FREE_DELIVERY_THRESHOLD = 50
+FREE_DELIVERY_THRESHOLD = 20
 STANDARD_DELIVERY_PERCENTAGE = 10
 STRIPE_CURRENCY = 'usd'
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', 'pk_test_51PH91MGg3mhclFC4sDTIM88SVI9srra8KW5zRD4KoPEmYS1ulZa5HFdhSQTELExJElYISTiH7O81nhhtWzGrd2Ka00qHIr5JW1')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', 'sk_test_51PH91MGg3mhclFC48KKkVycT5ZgjRjnJ0PLrzMqnRAZmN8DxYuLHfXs6Xh5Za9Ucjao5tGhfK4CHz7cDqpv9IcHh003jLWpMHH')
+STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', 'acct_1PH91MGg3mhclFC4')
