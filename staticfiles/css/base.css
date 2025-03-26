@@ -90,6 +90,10 @@ a.category-badge > span.badge:hover {
     cursor: pointer;
 }
 
+input[name='q']::placeholder {
+    color: #aab7c4;
+}
+
 .message-container {
     position: fixed;
     top: 72px;
@@ -322,6 +326,8 @@ body {
         max-width: 80px;
     }
 }
+
+
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
