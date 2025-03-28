@@ -2,7 +2,15 @@ html {
     height: 100%;
 }
 
+body {
+    background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 164px);
+    color: #555;
+    font-family: 'Lato';
+}
 
+/* from Bulma */
 .icon {
     align-items: center;
     display: inline-flex;
@@ -32,11 +40,16 @@ html {
 
 .btn-outline-black {
     background: white;
-    color: black !important;
+    color: black !important; /* use important to override link colors for <a> elements */
     border: 1px solid black;
 }
 
-
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+    background: black;
+    color: white !important;
+}
 
 .shop-now-button:hover,
 .shop-now-button:active,
@@ -44,55 +57,56 @@ html {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background:#222;
+    background: #222;
     color: white;
 }
 
 .text-black {
-    color: #000!important;
-
+    color: #000 !important;
 }
 
 .border-black {
-    border: 1px solid black!important;
+    border: 1px solid black !important;
 }
 
 .bg-black {
-    background: #5c5a5a !important;
+    background: #000 !important;
 }
 
 .overlay {
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    position: fixed;
-    background: white;
-    z-index: -1;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
 }
 
 a.category-badge > span.badge:hover {
-    background: #44484c;
-    color: #fff;
+    background: #212529 !important;
+    color: #fff !important;
 }
 
-.bttn-button {
+.btt-button {
     height: 42px;
     width: 42px;
     position: fixed;
     bottom: 10px;
     right: 10px;
-    
-    
 }
 
-.bttn-link {
+.btt-link,
+.update-link,
+.remove-item {
     cursor: pointer;
 }
 
 input[name='q']::placeholder {
     color: #aab7c4;
 }
+
+/* ------------------------------- bootstrap toasts */
 
 .message-container {
     position: fixed;
@@ -108,223 +122,65 @@ input[name='q']::placeholder {
 .toast-capper {
     height: 2px;
 }
-/* General Body Styling */
-body {
-    font-family: Geist Mono;
-    background-color: #f4f4f9;
-    color: #333;
-    margin: 0;
-    padding: 0;
-}
 
-/* Header Styling */
-.header-container {
-    background-color: #333;
-    color: white;
-    padding: 15px 0;
-}
-
-.header-container h1 {
-    font-size: 2.5rem;
-    text-align: center;
-}
-
-/* Overlay */
-.overlay {
+/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+.arrow-up {
+    width: 0; 
+    height: 0; 
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent; 
+    border-bottom: 10px solid black;
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.2);
-    z-index: -1;
+    top: -10px;
+    right: 36px;
 }
 
-/* Container and Row for Content */
-.container {
-    margin-top: 50px;
-    padding-left: 15px;
-    padding-right: 15px;
+/* Convenience classes - colors copied from Bootstrap */
+.arrow-primary {
+    border-bottom-color: #007bff !important;
 }
 
-.row {
-    margin: 0;
+.arrow-secondary {
+    border-bottom-color: #6c757d !important;
 }
 
-/* Table Styling */
-.table-responsive {
-    margin-top: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    padding: 20px;
+.arrow-success {
+    border-bottom-color: #28a745 !important;
 }
 
-.table {
-    width: 100%;
-    border-collapse: collapse;
+.arrow-danger {
+    border-bottom-color: #dc3545 !important;
 }
 
-.table th, .table td {
-    padding: 15px;
-    text-align: left;
-    vertical-align: middle;
+.arrow-warning {
+    border-bottom-color: #ffc107 !important;
 }
 
-.table th {
-    background-color: #f8f8f8;
-    font-weight: bold;
-    color: #333;
+.arrow-info {
+    border-bottom-color: #17a2b8 !important;
 }
 
-.table td {
-    background-color: #fff;
-    border-bottom: 1px solid #e0e0e0;
+.arrow-light {
+    border-bottom-color: #f8f9fa !important;
 }
 
-.table img {
-    width: 60px;
-    height: auto;
-    border-radius: 8px;
+.arrow-dark {
+    border-bottom-color: #343a40 !important;
 }
 
-/* Product Name Styling */
-.table td p {
-    margin: 0;
+.bag-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
-.table td p.my-0 {
-    font-size: 1rem;
-}
+/* -------------------------------- Media Queries */
 
-.table td .small {
-    font-size: 0.875rem;
-    color: #999;
-}
-
-/* Price and Total Section */
-.text-right h6 {
-    margin-bottom: 10px;
-    font-weight: normal;
-    font-size: 1.2rem;
-}
-
-.text-right h4 {
-    font-weight: bold;
-    font-size: 1.5rem;
-    color: #333;
-}
-
-.text-danger {
-    font-size: 0.875rem;
-    color: #d9534f;
-}
-
-/* Buttons */
-.btn {
-    padding: 12px 20px;
-    font-size: 1rem;
-    border-radius: 30px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.btn-outline-black {
-    border: 2px solid #333;
-    color: #333;
-    background-color: transparent;
-    transition: all 0.3s ease;
-}
-
-.btn-outline-black:hover {
-    background-color: #333;
-    color: white;
-}
-
-.btn-black {
-    background-color: #333;
-    color: white;
-    border: none;
-    transition: all 0.3s ease;
-}
-
-.btn-black:hover {
-    background-color: #444;
-}
-
-.icon {
-    margin-right: 10px;
-}
-
-.fas {
-    font-size: 1.2rem;
-}
-
-/* Keep Shopping Button */
-.btn-lg {
-    padding: 12px 30px;
-    font-size: 1.1rem;
-    margin-top: 10px;
-}
-
-/* Empty Bag Styling */
-.lead {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #888;
-    text-align: center;
-    margin-top: 50px;
-}
-
-.btn-outline-black {
-    margin-top: 20px;
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    .table-responsive {
-        margin-top: 10px;
-    }
-
-    .table td p {
-        font-size: 0.9rem;
-    }
-
-    .table th, .table td {
-        padding: 10px;
-    }
-
-    .table img {
-        width: 50px;
-    }
-
-    .btn-lg {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .container {
-        padding: 0 15px;
-    }
-
-    .table td {
-        font-size: 0.875rem;
-    }
-
-    .text-right h4, .text-right h6 {
-        font-size: 1rem;
-    }
-}
-
-/*...........................Media queries*/
-/* larger container on xl screens */
-@media (min-width: 1200px){
-    .container {
-        max-width: 80px;
-    }
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
 }
 
 /* Allauth form formatting */
@@ -394,123 +250,15 @@ body {
     .header-container {
         padding-top: 164px;
     }
-
 }
 
-/* pad the top when navbar collapse on mobile */
-
+/* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
         padding-top: 116px;
     }
 
     body {
-        height: 100vh;
-    }
-
-}
-
-/* Basic navbar styling */
-.navbar-nav {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Navbar items (li) */
-.nav-item {
-    position: relative;
-    margin: 0 15px;
-}
-
-/* Navbar links */
-.nav-link {
-    text-decoration: none;
-    font-weight: bold;
-    color: black;
-    padding: 10px 15px;
-    display: block;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-}
-
-/* Hover effect for navbar links */
-.nav-link:hover {
-    background-color: #f8f9fa; /* Light gray background on hover */
-}
-
-/* Dropdown menu */
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    z-index: 1000;
-}
-
-/* Show the dropdown when hovering */
-.nav-item:hover .dropdown-menu {
-    display: block;
-}
-
-/* Dropdown items */
-.dropdown-item {
-    text-decoration: none;
-    padding: 10px 15px;
-    color: black;
-    font-size: 14px;
-    display: block;
-    transition: background-color 0.3s ease;
-}
-
-/* Hover effect for dropdown items */
-.dropdown-item:hover {
-    background-color: #f8f9fa;
-}
-
-/* Remove borders from dropdown items */
-.dropdown-item {
-    border: none;
-}
-
-/* Navbar item spacing */
-.navbar-nav > .nav-item {
-    margin-right: 20px;
-}
-
-.nav-item .dropdown-menu {
-    padding-left: 0;
-}
-
-/* Fix for potential visual misalignment */
-.navbar-nav > .nav-item > .dropdown-menu {
-    margin-top: 5px;
-}
-
-/* For mobile view, adjust navbar items to be centered */
-@media (max-width: 768px) {
-    .navbar-nav {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .nav-item {
-        margin-bottom: 10px;
-    }
-
-    .nav-link {
-        padding: 12px;
-    }
-
-    .dropdown-menu {
-        position: relative;
-        width: 100%;
+        height: calc(100vh - 116px);
     }
 }
