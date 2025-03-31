@@ -1,7 +1,6 @@
 from django import forms
+from .widgets import CustomClearableFileInput
 from .models import Product, Category
-
-
 
 class ProductForm(forms.ModelForm):
 
@@ -9,15 +8,15 @@ class ProductForm(forms.ModelForm):
         model = Product
         fields = '__all__'
 
+    image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         categories = Category.objects.all()
         
-        # Change here: Use c.name instead of c.get_friendly_name()
-        friendly_names = [(c.id, c.name) for c in categories]  # Assuming 'name' is the field
+        # Use the name field directly if get_friendly_name is not defined
+        friendly_names = [(c.id, c.name) for c in categories]  # Use c.name here
 
         self.fields['category'].choices = friendly_names
-        
-        # Add classes to all form fields
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'border-black rounded-0'
