@@ -54,7 +54,8 @@ INSTALLED_APPS = [
 
     # Other
     'crispy_forms',
-    'crispy_bootstrap4'
+    'crispy_bootstrap4',
+    'storages',
 
 ]
 
@@ -186,11 +187,29 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+if 'USE_AWS' in os.environ:
+    # Bucket Config
+    AWS_STORAGE_BUCKET_NAME = 'cakesspices' # change this to your AWS bucket name
+    AWS_S3_REGION_NAME = 'us-east-1'
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+    # Static and media files
+    STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+    STATICFILES_LOCATION = 'static'
+    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+    MEDIAFILES_LOCATION = 'media'
+
+    # Override static and media URLs in production
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+
 #stripe
 FREE_DELIVERY_THRESHOLD = 20
 STANDARD_DELIVERY_PERCENTAGE = 10
 STRIPE_CURRENCY = 'usd'
-STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', 'pk_test_51PH91MGg3mhclFC4sDTIM88SVI9srra8KW5zRD4KoPEmYS1ulZa5HFdhSQTELExJElYISTiH7O81nhhtWzGrd2Ka00qHIr5JW1')
-STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', 'sk_test_51PH91MGg3mhclFC48KKkVycT5ZgjRjnJ0PLrzMqnRAZmN8DxYuLHfXs6Xh5Za9Ucjao5tGhfK4CHz7cDqpv9IcHh003jLWpMHH')
-STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', 'acct_1PH91MGg3mhclFC4')
+STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
+STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 DEFAULT_FROM_EMAIL = 'davidokon646@yahoo.com'
