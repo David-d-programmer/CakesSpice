@@ -28,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', '3b_daxvhwj_hiftfe#+3oj8sdhc%(+ne#-5e((1wehzm2%r-wz')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['8000-daviddprogra-cakesspice-1odgbs0dfx0.ws-eu118.gitpod.io', 'localhost']
 
