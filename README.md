@@ -1,131 +1,130 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+## CAKESSPICES
+Welcome! to [CAKESSPICES](hhttps://cakesspice-d57190d7147c.herokuapp.com/), An cake ecommerce site where every kind of cake you desire can be gotten with affordable prices and also great tastes. Whether you're craving a special kind of cake, we can make it available to you. 
+![ home page](/workspace/CakesSpice/media/pexels-moose-photos-170195-1036621 (1).jpg)
+## Table of Contents
+* All products
+* Cheese Cake
+* Carrot Cake
+* Chocolate Cake
+* Red Velvet Cake
+* Butter Cake
+## About Us
+Welcome to CakeSSpice — where every bite feels like home.
 
-Welcome David Okon,
+We’re more than just cake makers — we’re flavor creators. At CakeSSpice, we specialize in crafting ready-made cakes infused with our signature blend of unique, heartwarming spices that bring comfort and joy to every celebration. Whether you're marking a milestone, sharing a sweet moment, or just treating yourself (because why not?), our cakes are made to make it special.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+Our name says it all — Cake + Spice — a delicious combination that reflects our passion for baking with a twist. Inspired by the rich flavors of home baking and the warmth of tradition, each cake is made with care, quality ingredients, and a whole lot of love.
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+From birthdays to baby showers, casual get-togethers to grand celebrations, CakeSSpice is here to make your moments a little sweeter.
 
-## Gitpod Reminders
+So go ahead, find your favorite — your next favorite memory is just a slice away.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## TESTING
+Testing for the CakeSSpice ecommerce site was conducted using a combination of manual testing and automated testing with pytest to ensure the reliability, responsiveness, and overall performance of the application.
 
-`python3 -m http.server`
+### Manual Testing
+Manual testing was performed across all key components of the website, including:
 
-A blue button should appear to click: _Make Public_,
+* Product listing and detail pages
 
-Another blue button should appear to click: _Open Browser_.
+* Shopping bag (cart) functionality
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+* Checkout and order confirmation processes
 
-A blue button should appear to click: _Make Public_,
+* User authentication (login, register, logout)
 
-Another blue button should appear to click: _Open Browser_.
+* Navigation and page routing
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+* Manual checks focused on:
 
-To log into the Heroku toolbelt CLI:
+Functionality: Ensuring buttons, links, forms, and logic flows worked correctly
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+Responsiveness: Testing the site layout and interactions on various screen sizes (mobile, tablet, desktop)
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+Error Handling: Triggering errors and checking that appropriate messages were shown
 
-### Connecting your Mongo database
+Performance: Monitoring page load speeds and smooth transitions
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+The site was tested on different devices and browsers to validate consistent user experience across platforms.
 
-------
+### Automated Testing
+Automated tests were written and run using pytest to validate core logic and backend functionality. These tests helped catch edge-case scenarios and ensured that views and models behaved as expected under various conditions.
 
-## Release History
+### FRONT END VALIDATOR TESTING
+ HTML - W3C VALIDATOR 
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+ CSS - Jigsaw VALIDATOR
+### Prerequisites
+All manner of testing was done and neceswary installation was done to keep this app running:
+npm install and everything in the pip3 list
 
-**June 18, 2024,** Add Mongo back into template
+### Unfixed bug
+I encountered a lot bugs when trying to deploy my project which the tutors help me so much to fix and i also made use of some materials to fix some. i encountered some challenges in the database area and i just followed every information about what needed to be done and i fixed it. The only thing left undone is navbar of the home page, i don't think it's responsive enough.
 
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
+During testing, a few bugs were identified:
 
-**May 28 2024:** Fix Mongo and Links installs
+Issues with the remove and update functions in the Bag (cart) app. While attempts were made to resolve these, further debugging or assistance may be needed.
 
-**April 26 2024:** Update node version to 16
+Minor UI inconsistencies on smaller screen sizes, which were addressed during the responsive testing phase.
 
-**September 20 2023:** Update Python version to 3.9.17.
+## DEPLOYEMENT
+This site was deployed by completing the following steps:
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+- Log in to Heroku or create an account
+- On the main page click the button labelled New in the top right corner and from the drop-down menu select Create New App
+- You must enter a unique app name
+- Next select your region
+- Click on the Create App button
+- The next page is the project’s Deploy Tab. Click on the Settings Tab and scroll down to Config Vars
+- Click Reveal Config Vars and enter disable collectstatic and give it a value one, also add the api key and the database url  and click the Add button
+- Scroll down to the Buildpack section click Add Buildpack select python and click Save Changes
+- Scroll to the top of the page and choose the Deploy tab
+- Select Github as the deployment method
+- Confirm you want to connect to GitHub
+- Search for the repository name and click the connect button
+- Scroll to the bottom of the deploy page and select the preferred deployment type
+- Click either Enable Automatic Deploys for automatic deployment when you push updates to Github
+you can see the live link [here](https://cakesspice-d57190d7147c.herokuapp.com/)
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+## CREDIT
+### Contents
+- Most images were gotten from Pixabay 
+- The terminal function and template for the deployable application was provided by [Code Institute - Template](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+EA101+7/courseware/eb05f06e62c64ac89823cc956fcd8191/2ad6f973a09b4b70a08943a73c9ac0ab/?child=last)
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+## Information Sources
+- [Stackoverflow](https://stackoverflow.com/questions/44935514/heroku-uploading-a-static-site-on-heroku)
+- [Django documentation](https://docs.djangoproject.com/en/5.1/)
+- [Code Institute template]((https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FSD101_WTS+4/courseware/713441aba05441dfb3a7cf04f3268b3f/824fccecd0fe4e44871eeabcbf69d830/)
+)
+## Menu
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+For a full products list, visit our [website](https://8000-daviddprogra-cakesspice-1odgbs0dfx0.ws-eu118.gitpod.io/products/) or place your order online.
+![ products page](https://8000-daviddprogra-cakesspice-1odgbs0dfx0.ws-eu118.gitpod.io/products/)
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+## Ordering
+Ordering at Cakesspices is easy! You can choose from the following methods:
+1. Online: Visit our [website link] to browse the menu, place an order for delivery or takeout, and pay securely online.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+## Payment Methods
+* Credit/Debit Card
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+## Contact Information
+We'd love to hear from you! For inquiries, orders, or any questions, you can reach us via:
+* Phone: [Phone number]
+* Email: [Email address]
+* Address: [Restaurant Address]
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+## Social Media
+Stay updated with our latest offers, events, and mouth-watering pictures by following us:
+* Instagram: [Instagram handle]
+* Facebook: [Facebook page]
+* Twitter: [Twitter handle]
+* TikTok: [TikTok handle]
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+### Summary
+Overall, the site performs well across different environments and use cases. Testing helped ensure that the user experience is smooth, intuitive, and reliable, with only a few isolated areas (like cart updates/removal) needing further attention.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+# Special thanks
+Special thanks to my mentor Sandeep Aggarwal, my tutors at Code Institute, for their assistance throughout this project.
